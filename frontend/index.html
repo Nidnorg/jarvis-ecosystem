@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Jarvis Ecosystem</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <h1>🌐 Écosystème Jarvis</h1>
+        <div class="status" id="status">Connexion...</div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="container">
+        <!-- Ecosystem View -->
+        <div id="ecosystem" class="ecosystem">
+            <!-- Canvas for agents -->
+            <canvas id="canvas"></canvas>
+
+            <!-- Agent labels -->
+            <div id="agent-labels"></div>
+
+            <!-- Conversation bubbles -->
+            <div id="conversations"></div>
+        </div>
+
+        <!-- Control Panel -->
+        <div class="controls">
+            <button id="btn-add-mission" class="btn-primary">➕ Mission</button>
+            <button id="btn-show-status" class="btn-secondary">📊 Statut</button>
+            <button id="btn-show-history" class="btn-secondary">📜 Historique</button>
+        </div>
+
+        <!-- Mission Modal -->
+        <div id="mission-modal" class="modal hidden">
+            <div class="modal-content">
+                <h2>Donner une mission</h2>
+                <input type="text" id="mission-input" placeholder="Ex: Trouve 3 niches rentables sur Etsy">
+                <div class="modal-actions">
+                    <button id="btn-send-mission" class="btn-primary">Envoyer</button>
+                    <button id="btn-cancel-mission" class="btn-secondary">Annuler</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Status Panel -->
+        <div id="status-panel" class="panel hidden">
+            <h2>Statut des agents</h2>
+            <div id="agent-status-list"></div>
+        </div>
+
+        <!-- History Panel -->
+        <div id="history-panel" class="panel hidden">
+            <h2>Historique</h2>
+            <div id="history-list"></div>
+        </div>
+    </main>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+        <button class="nav-item active" data-view="ecosystem">🌐 Écosystème</button>
+        <button class="nav-item" data-view="status">📊 Statut</button>
+        <button class="nav-item" data-view="history">📜 Historique</button>
+    </nav>
+
+    <script src="js/app.js"></script>
+    <script src="js/agents.js"></script>
+    <script src="js/websocket.js"></script>
+</body>
+</html>
