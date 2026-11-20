@@ -7,10 +7,8 @@ from telegram.ext import Application, CommandHandler, MessageHandler, filters, C
 import os
 
 # Bot token from environment variable
-BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "YOUR_BOT_TOKEN_HERE")
-
-# Mini App URL (to be configured)
-MINI_APP_URL = os.getenv("MINI_APP_URL", "https://your-domain.com")
+BOT_TOKEN = "9093745263:AAE1el0EJGaT2Tau5bWMIrMV_kYApim2nwc"
+MINI_APP_URL = "https://nidnorg.github.io/jarvis-ecosystem/"
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Send a welcome message with Mini App button."""
